@@ -5,16 +5,33 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingWiX", "TestingWiX\TestingWiX.csproj", "{16D0C141-26F5-4948-BEA8-64400C323EBF}"
 EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "TestingWixInstaller", "TestingWixInstaller\TestingWixInstaller.wixproj", "{3A8ADF19-09F7-4E22-A64D-55DB3C73052A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{16D0C141-26F5-4948-BEA8-64400C323EBF} = {16D0C141-26F5-4948-BEA8-64400C323EBF}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{16D0C141-26F5-4948-BEA8-64400C323EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{16D0C141-26F5-4948-BEA8-64400C323EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D0C141-26F5-4948-BEA8-64400C323EBF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{16D0C141-26F5-4948-BEA8-64400C323EBF}.Debug|x86.Build.0 = Debug|Any CPU
 		{16D0C141-26F5-4948-BEA8-64400C323EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16D0C141-26F5-4948-BEA8-64400C323EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D0C141-26F5-4948-BEA8-64400C323EBF}.Release|x86.ActiveCfg = Release|Any CPU
+		{16D0C141-26F5-4948-BEA8-64400C323EBF}.Release|x86.Build.0 = Release|Any CPU
+		{3A8ADF19-09F7-4E22-A64D-55DB3C73052A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3A8ADF19-09F7-4E22-A64D-55DB3C73052A}.Debug|x86.ActiveCfg = Debug|x86
+		{3A8ADF19-09F7-4E22-A64D-55DB3C73052A}.Debug|x86.Build.0 = Debug|x86
+		{3A8ADF19-09F7-4E22-A64D-55DB3C73052A}.Release|Any CPU.ActiveCfg = Release|x86
+		{3A8ADF19-09F7-4E22-A64D-55DB3C73052A}.Release|x86.ActiveCfg = Release|x86
+		{3A8ADF19-09F7-4E22-A64D-55DB3C73052A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
