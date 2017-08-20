@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="TestingWix" Language="1033" Version="1.0.0.0" Manufacturer="Bart Tutorial" UpgradeCode="a10c135b-5cac-4575-bebd-5f7b7345834b">
+	<Product Id="*" Name="$(var.TestingWiX.ProjectName)" Language="1033" Version="1.0.0.0" Manufacturer="Bart Tutorial" UpgradeCode="a10c135b-5cac-4575-bebd-5f7b7345834b">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate />
 
-		<Feature Id="ProductFeature" Title="TestingWix" Level="1">
+		<Feature Id="ProductFeature" Title="$(var.TestingWiX.ProjectName)" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
 	</Product>
@@ -14,17 +14,16 @@
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="TestingWix" />
+				<Directory Id="INSTALLFOLDER" Name="$(var.TestingWiX.ProjectName)" />
 			</Directory>
 		</Directory>
 	</Fragment>
 
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-			<!-- <Component Id="ProductComponent"> -->
-				<!-- TODO: Insert files, registry keys, and other resources here. -->
-			<!-- </Component> -->
+			<Component Id="ProductComponent" Guid="{E2EF2E66-3C71-4E55-B7A8-B71F3A0E750F}">
+				<File Id="TestingWiX.exe" Source="$(var.TestingWiX.TargetDir)"/>
+			</Component>
 		</ComponentGroup>
 	</Fragment>
 </Wix>
