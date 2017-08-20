@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace TestingWiX
 {
@@ -15,6 +7,8 @@ namespace TestingWiX
 		public Form1()
 		{
 			InitializeComponent();
+			Text = Application.ProductName;
+			labelInfo.Text = $"v{Application.ProductVersion}";
 		}
 	}
 }
